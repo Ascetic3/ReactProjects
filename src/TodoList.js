@@ -15,6 +15,7 @@ export default function TodoList(props) {
                                     className="button is-success"
                                     title="Пометить как выполненное"
                                     disabled={item.done}
+                                    onClick={(e) => props.setDone(item.key)}
                                 >
                                     &#9745;
                                 </button>
@@ -23,6 +24,7 @@ export default function TodoList(props) {
                                 <button
                                     className="button is-danger"
                                     title="Удалить"
+                                    onClick={(e) => props.delete(item.key)}
                                 >
                                     &#9746;
                                 </button>
@@ -34,3 +36,5 @@ export default function TodoList(props) {
         </section>
     );
 }
+
+
